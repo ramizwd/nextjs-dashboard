@@ -2,7 +2,12 @@ import { fetchLatestInvoices } from '@/app/lib/data';
 import { lusitana } from '@/app/ui/fonts';
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
+import { Metadata } from 'next';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'Invoices',
+};
 
 export default async function LatestInvoices() {
   const latestInvoices = await fetchLatestInvoices();
